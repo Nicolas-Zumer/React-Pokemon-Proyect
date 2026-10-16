@@ -1,0 +1,111 @@
+:root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #282a28;
+  background: #f2eee5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --ink: #282a28;
+  --ink-soft: #545750;
+  --paper: #f2eee5;
+  --paper-light: #fffdf7;
+  --line: #d8d0c1;
+  --accent: #c84c31;
+  --accent-dark: #9f3523;
+  --safety: #e7b442;
+  --green: #547158;
+  --shadow: 0 8px 22px rgb(40 42 40 / 8%);
+  --line-strong: #d4cbb9;
+  --paper-card: #fffefa;
+  --paper-muted: #f7f4ed;
+  --ink-muted: #78786f;
+  --danger: #a52d22;
+  --card-shadow-line: #d8d0c1;
+  --nav-background: #282a28;
+  --nav-foreground: #fffdf7;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  color: #eeeae1;
+  background: #1e211f;
+
+  --ink: #eeeae1;
+  --ink-soft: #c0c2b9;
+  --paper: #1e211f;
+  --paper-light: #292d2a;
+  --line: #484e49;
+  --accent: #e4775b;
+  --accent-dark: #c95a40;
+  --safety: #e7c268;
+  --green: #9ab39b;
+  --shadow: 0 8px 22px rgb(0 0 0 / 24%);
+  --line-strong: #484e49;
+  --paper-card: #303531;
+  --paper-muted: #252a26;
+  --ink-muted: #b2b5aa;
+  --danger: #ff9585;
+  --card-shadow-line: #151815;
+  --nav-background: #131614;
+  --nav-foreground: #eeeae1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgb(80 70 50 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(80 70 50 / 3%) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+:root[data-theme='dark'] body {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 2%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 2%) 1px, transparent 1px);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--safety);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  color: var(--paper-light);
+  background: var(--accent);
+}
